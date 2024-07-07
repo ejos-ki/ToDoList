@@ -1,0 +1,57 @@
+/*
+        File Type :    Cascading Style Sheets (CSS)
+        Used in   :    index.html
+        Code by   :    Jeo D. Latorre
+*/
+
+
+@media (max-width: 250px) {
+    .container {
+        position : fixed;
+        bottom   : 0;
+        right    : 0;
+        left     : 0;
+        top      : 0;
+    }
+}
+
+@media (max-width: 115px) {
+    .circle1, .circle2, .circle3 {
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 760px) {
+    .innerContent {
+        grid-template-columns : 1fr;
+        grid-template-rows    : 60px 50px 1fr;
+        grid-template-areas   :
+            "topArea"
+            "upRightArea"
+            "leftArea";
+        row-gap: 5px;
+    }
+
+    .addList {
+        overflow: hidden;
+    }
+
+    .progress {
+        visibility: hidden;
+        position  : absolute;
+    }
+
+    .listArea {
+        overflow-x     : hidden;
+        overflow-y     : auto;
+        scrollbar-width: thin;  
+        scrollbar-color: #d3d39a #2a2c0c;  
+    }
+}
+
+@media (max-height: 477px) {
+    .container {
+        top   : 0;
+        bottom: 0;
+    }
+}

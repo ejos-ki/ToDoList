@@ -1,0 +1,177 @@
+<!-- 
+        File Type :    HyperText Markup Language (HTML)
+        Uses      :    General.css, 
+                       ListAdder.css, 
+                       Main.css,
+                       MediaQuery.css, 
+                       Main.js 
+                       Variables.js
+        Code by   :    Jeo D. Latorre
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>     Todo List   </title>
+
+    <link rel="shortcut icon" type="x-icon" href="images/logoDark.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/General.css">
+    <link rel="stylesheet" href="css/Main.css">
+    <link rel="stylesheet" href="css/ListAdder.css">
+    <link rel="stylesheet" href="css/MediaQuery.css">
+</head>
+<body>
+    <div class="bgOwner">
+        Background Image by: 
+        <a href="https://www.agux.co/blog/what-to-do-if-your-sticky-notes-wont-stick">
+            Austin Govella, UX
+        </a>
+    </div>
+
+    <div class="container">
+
+        <span class="circle1"></span>
+        <span class="circle2"></span>
+        <span class="circle3"></span>
+
+        <div class="innerContent">
+            <header>
+                My ToDo List
+                <sup> Developer: Jeo Latorre </sup>
+            </header>
+
+            <div class="listArea">
+                <div class="today">
+                    <p class="todayLabel">
+                        Today's ToDo List
+                    </p>
+
+                    <div class="todayContainer">
+                        <!-- will dynamically add child base on data -->
+                    </div>
+                </div>
+
+                <div class="week">
+                    <div class="sunday"> 
+                        <hr>
+                        <p class="day">Sunday</p>
+
+                        <div class="tasksDay1">
+                            <ul class="dayContainer1">
+                                <!-- will dynamically add child base on data -->
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="monday">
+                        <hr>
+                        <p class="day"> Monday </p>
+
+                         <div class="tasksDay2">
+                            <ul class="dayContainer2">
+                                <!-- will dynamically add child base on data -->
+                            </ul>
+                         </div>
+                    </div>
+
+                    <div class="tuesday">
+                        <hr>
+                         <p class="day">Tuesday</p>
+
+                         <div class="tasksDay3">
+                            <ul class="dayContainer3">
+                                <!-- will dynamically add child base on data -->
+                            </ul>
+                         </div>
+                    </div>
+
+                    <div class="wednesday"> 
+                        <hr>
+                        <p class="day">Wednesday </p>
+
+                        <div class="tasksDay4">
+                            <ul class="dayContainer4">
+                                <!-- will dynamically add child base on data -->
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="thursday"> 
+                        <hr>
+                        <p class="day">Thursday </p>
+
+                        <div class="tasksDay5">
+                            <ul class="dayContainer5">
+                                <!-- will dynamically add child base on data -->
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="friday"> 
+                        <hr>
+                        <p class="day">Friday </p>
+
+                        <div class="tasksDay6">
+                            <ul class="dayContainer6">
+                                <!-- will dynamically add child base on data -->
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="saturday"> 
+                        <hr>
+                        <p class="day">Saturday</p>
+
+                        <div class="tasksDay7">
+                            <ul class="dayContainer7">
+                                <!-- will dynamically add child base on data -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="addList">
+                <p class="currentDateAndDay"> </p>
+
+                <button class="createGenList"> + </button>
+
+                <p> Keep grinding go go go!! </p>
+            </div>
+
+            <div class="progress">
+                <div class="chartContainer">
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="createToDoList">
+        <button class="closeCreateGeneral"> X </button>
+
+        <p>     Create ToDo List  </p>
+
+        <form id="formGeneral"> 
+            <input class="createDateGeneral" type="date" id="" required>
+
+            <span class="guide2">
+                For Multiple Lists,<br> Please separate using <strong>&nbsp;  Enter  &nbsp;</strong> Key
+            </span>
+
+            <textarea class="createInputGeneral"  placeholder="Create ToDo List" required></textarea>
+
+            <input type="submit">
+        </form>
+    </div>
+
+    <div class="blur"></div>
+    <script type="module" src="script/Variables.js"></script>
+    <script type="module" src="script/Main.js"></script>
+</body>
+</html>

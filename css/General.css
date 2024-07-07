@@ -1,0 +1,80 @@
+/*
+        File Type :    Cascading Style Sheets (CSS)
+        Used in   :    index.html
+        Code by   :    Jeo D. Latorre
+*/
+
+body {
+    background        : url('../images/bg.jpg');
+    background-repeat : repeat;
+    background-size   : cover;
+    user-select       : none;
+    display           : flex;
+    align-items       : center;
+    justify-content   : center;
+}
+
+a {
+    text-decoration: none;
+    color          : yellow; 
+}
+
+p {
+    margin : 0;
+    display: inline-block;
+}
+
+hr {
+    margin-bottom: 0;
+    border       : 1px solid white;
+}
+
+form {
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items    : left;
+    padding        : 15px;
+    gap            : 10px 10px;
+}
+
+svg {
+    padding: 0;
+    margin : 0;
+    height : 10px;
+}
+
+textarea.createInputGeneral::placeholder {
+    font-size  : 12px;
+}
+
+textarea.createInputGeneral {
+    padding: 20px;
+    margin : 0;
+    border : none;
+    resize : none; 
+    height : 80px;
+
+    white-space    : pre;
+    overflow       : auto;
+    scrollbar-width: thin;  
+    scrollbar-color: #d3d39a #2a2c0c;  
+}
+
+input.submitButton[type="submit"] {
+    background-color: rgba(0, 0, 0, 0.4);
+    font-family     :'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size       : 12px;
+    padding         : 5px;
+    border          : none;
+    color           : white;
+    transition      : background-color 0.5s;
+}
+
+input.submitButton[type="submit"]:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+input.submitButton[type="submit"]:active {
+    background-color: rgba(0, 0, 0, 1);
+}

@@ -1,0 +1,386 @@
+/*
+        File Type :    Cascading Style Sheets (CSS)
+        Used in   :    index.html
+        Code by   :    Jeo D. Latorre
+*/
+
+.bgOwner {
+    position: fixed;
+    bottom  : 0;
+    right   : 0;
+    height  : auto;
+    padding : 5px;
+
+
+    border-top-left-radius: 10px;
+    background-color      : black;
+    font-family           : Georgia, 'Times New Roman', Times, serif;
+    text-align            : center;
+    font-size             : clamp(6px, 6px, 18px);
+    z-index               : 2;
+    color                 : white;
+}
+
+.container {
+    position: fixed;
+    bottom  : 50px;
+    right   : 50px;
+    left    : 50px;
+    top     : 50px;
+
+    border-radius: 20px;
+    padding-top  : 20px;
+    background   : rgba(0, 0, 0, 0.7);
+    overflow     : hidden;
+    z-index      : 1;
+
+    transition: left 0.4s, right 0.4s, top 0.4s, bottom 0.4s;
+}
+
+.circle1, .circle2, .circle3 {
+    z-index : 2;
+    width   : 18px;
+    height  : 18px;
+    position: absolute;
+    top     : 10px;
+
+    border-radius: 50%;
+}
+
+.circle1 {
+    background-color: #d0ba41;
+    left            : 30px;
+}
+
+.circle2 {
+    background-color: #d2d547;
+    left            : 50px;
+}
+
+.circle3 {
+    background-color: rgb(245, 242, 242);
+    left            : 70px;
+}
+
+.innerContent {
+    display : grid;
+    position: absolute;
+    bottom  : 15px;
+    right   : 15px;
+    left    : 15px;
+    top     : 15px;
+    z-index : 1;
+    gap     : 5px 5px;
+    overflow: hidden;
+
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows   : 60px 100px 2fr;
+    grid-template-areas  :
+        "topArea topArea"
+        "leftArea upRightArea"
+        "leftArea botRightArea";
+
+    overflow       : auto;
+    scrollbar-width: thin;  
+    scrollbar-color: #d3d39a #2a2c0c;  
+    transition     : all 0.5s ease;
+}
+
+
+
+
+
+/*          Inner Content -- Header          */
+header {
+    grid-area: topArea;
+
+    display        : flex;
+    justify-content: center;
+    flex-direction : column;
+    align-items    : center;
+
+    position : sticky;
+    top      : 0;
+    z-index  : 5;
+    text-wrap: nowrap;
+    font-size: clamp(19px, 8vw, 30px);
+    color    : rgb(223, 247, 85);
+    
+    border-top-right-radius: 20px;
+    border-top-left-radius : 20px;
+    background-color       : rgba(245, 244, 244, 0.5);
+    text-shadow            : 0 0 10px #000000, 
+                             0 0 20px #000000, 
+                             0 0 30px #010401;
+    font-family            : Cambria, Cochin, 
+                             Georgia, Times, 
+                            'Times New Roman', serif;
+}
+
+header sup {
+    font-family:'Courier New', 
+                 Courier, monospace;
+    font-size  : clamp(8px, 3vw, 10px);
+    margin-top : -1px;
+    color      : white;
+}
+
+
+/*          Inner Content -- Header -- Progress          */
+.progress {
+    display         : grid;
+    grid-area       : botRightArea;
+
+
+    background-color: rgba(255, 255, 255, 0.1);
+    color           : white;
+    font-size       : 14px;
+    overflow        : auto;
+    scrollbar-width : thin;  
+    scrollbar-color : #d3d39a #2a2c0c;  
+
+    border-bottom-right-radius: 15px;
+}
+
+.progress div {
+    position       : relative;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+}
+
+canvas {
+    background-color: rgba(41, 35, 35, 0.6);
+    padding         : 5%; 
+    display         : block;
+    width           : 80% !important;
+    height          : 80% !important;
+}
+
+/*          Inner Content -- Header -- AddList          */
+.addList {
+    display        : grid;
+    justify-content: center;
+    flex-direction : column;
+    align-items    : center;
+    grid-area      : upRightArea;
+    position       : relative;
+    text-align     : center;
+    column-gap     : 10px;
+    padding        : 5px;
+    color          : white;
+
+    grid-template-columns: 1fr auto;
+    grid-template-rows   : auto 1fr;
+    grid-template-areas  : 
+            "date addButton"
+            "quote quote";
+
+
+    overflow       : auto;
+    scrollbar-width: thin;  
+    scrollbar-color: #d3d39a #2a2c0c;  
+
+    background-color: rgba(255, 255, 255, 0.1);
+    transition      : visibility 0.15s;
+}
+
+.addList button {
+    border-radius : 50%;
+    grid-area     : addButton;
+    font-size     : clamp(15px, 3vw, 20px);
+    border        : none;
+
+    transition    : background-color 0.3s;
+}
+
+.addList p {
+    font-style: italic;
+    grid-area : quote;
+    font-size : clamp(8px, 3vw, 13px);
+}
+
+.addList .currentDateAndDay {
+    grid-area  : date;
+    font-style : normal;
+    font-weight: normal;
+    font-family:'Times New Roman', 
+                 Times, serif;
+
+    border-bottom: 1px solid white;
+    font-size    : clamp(10px, 3vw, 17px);
+    padding      : 5px;
+    color        : rgb(255, 241, 133);
+}
+
+.createGenList:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 20px;
+    border-radius: 40%;
+} 
+
+.createGenList:active {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+    font-size: 20px;
+    border-radius: 40%;
+} 
+
+
+/*          Inner Content -- List Area         */
+.listArea {
+    grid-area: leftArea;
+    display  : grid;
+    row-gap  : 5px;
+    color    : white;
+
+    grid-template-rows       : 60px 1fr;
+    border-bottom-left-radius: 15px;
+}
+
+
+/*          Inner Content -- List Area -- Today        */
+.today {
+    display              : grid;
+    background-color     : rgba(255, 255, 255, 0.2);
+    grid-template-columns: minmax(clamp(40px, 20vw, 60px), 20px) 1fr;
+
+    margin     : 0;
+    font-size  : clamp(9px, 3vw, 12px);
+    text-align : center;
+    font-family: Georgia, 'Times New Roman', 
+                 Times, serif;
+}
+
+.todayLabel {
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    border-right   : 1px solid white;
+    border-left    : 1px solid white;
+}
+
+.todayContainer {
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.todayContainer ul {
+    display: grid;
+    padding: 0;
+    margin : 0;
+    gap    : 10px 10px;
+    height : 60px;
+
+
+    list-style     : none;
+    overflow       : auto;
+    scrollbar-width: thin;  
+    scrollbar-color: #d3d39a #2a2c0c;
+
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows   : repeat(auto-fit, minmax(50pxpx, 1fr));
+}
+
+.todayContainer p {
+    padding        : 5px;
+    overflow       : auto;
+    scrollbar-width: thin;  
+    scrollbar-color: #d3d39a #2a2c0c;  
+}
+
+.todayContainer li {
+    display     : grid;
+    text-align  : left;
+    user-select : auto;
+    padding-left: 10px;
+}
+
+
+/*          Inner Content -- List Area -- Today        */
+.week {
+    display : grid;
+    padding : 10px;
+    gap     : 10px 10px;
+    overflow: auto;
+
+    scrollbar-width      : thin;  
+    scrollbar-color      : #d3d39a #2a2c0c; 
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows   : repeat(auto-fit, minmax(140px, 1fr));
+    transition: all 0.5s ease;
+}
+
+.sunday, .monday, .tuesday, .wednesday,
+.thursday, .friday, .saturday {
+    min-height   : 140px; 
+    position     : relative;
+    display      : inline-block;
+    border       : 2px solid white;
+    margin       : 0;
+    border-radius: 10px;
+
+    overflow-y     : auto;
+    scrollbar-width: thin;  
+    scrollbar-color: #d3d39a #2a2c0c;  
+}
+
+.day {
+    position: absolute;
+    left    : 0;
+    top     : -3px;
+    width   : auto;
+    padding : 4px;
+    color   : black;
+
+
+    background-color: rgb(255, 241, 133);
+    border-radius   : 10px;
+    font-weight     : bold;
+    font-size       : 12px;
+    transition: all 0.5s ease;
+}
+
+.done {
+    fill: greenyellow;
+}
+
+.delete {
+    fill: lightpink;
+}
+
+.action {
+    display     : inline-block;
+    padding-left: 12px;
+    margin-top  : 0px;
+}
+
+.dayContainer1, .dayContainer2, .dayContainer3,
+.dayContainer4, .dayContainer5, .dayContainer6, .dayContainer7 {
+    list-style: none;
+    padding   : 5px 0px 10px 0px;
+    margin    : 0;
+}
+
+.dateList {
+    padding    : 10px 5px 0px 10px;
+    font-size  : 10px;
+    font-weight: bold;
+}
+
+.todoListWeek {
+    font-weight : 100;
+    font-size   : 9px;
+    padding-left: 20px;
+}
+
+.tasksDay1, .tasksDay2, .tasksDay3,
+.tasksDay4, .tasksDay5, .tasksDay6, .tasksDay7 {
+    height: 100% - 8px;
+}
+
+.icon {
+    visibility: hidden;
+    position  : absolute;
+}

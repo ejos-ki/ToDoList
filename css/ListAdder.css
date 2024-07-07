@@ -1,0 +1,76 @@
+/*
+        File Type :    Cascading Style Sheets (CSS)
+        Used in   :    index.html
+        Code by   :    Jeo D. Latorre
+*/
+
+.createToDoList {
+    display           : grid;
+    grid-template-rows: 30px 1fr;
+    position          : fixed;
+    top               : 30%;
+    z-index           : 6;
+
+    background-color: hsl(45, 56%, 69%);
+    border-radius   : 5%;
+    box-shadow      : 0 4px 100px rgba(255, 255, 255, 0.2);
+    text-align      : center;
+    visibility      : hidden;
+    color           : black;
+}
+
+.blur {
+    position: fixed;
+    bottom  : 0;
+    right   : 0;
+    left    : 0;
+    top     : 0;
+    z-index : 5;
+
+    background-color: rgba(0, 0, 0, 0.6);
+    visibility      : hidden;
+}
+
+.closeCreateGeneral {
+    width   : 30px;
+    height  : 30px;
+    position: absolute;
+    right   : -10px;
+    top     : -10px;
+
+    background-color: hsl(45, 56%, 30%);
+    border-radius   : 50%; 
+    border          : none;
+    font-weight     : bold;
+    color           : white;
+
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.closeCreateGeneral:hover {
+    background-color: hsl(45, 56%, 80%);
+    color           : #010401;
+}
+
+.createToDoList p {
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    border-bottom  : 1px solid white;
+    font-weight    : bold;
+    margin         : 0;
+}
+
+.guide2 {
+    background-color: rgba(158, 62, 62, 0.5);
+    border-radius   : 15px;
+    font-size       : 11px;
+    text-align      : center;
+    color           : white;
+    visibility      : hidden;
+    position        : absolute;
+}
+
+strong {
+    font-size: 14px;
+}
